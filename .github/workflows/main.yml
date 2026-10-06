@@ -108,7 +108,7 @@ jobs:
           then
             run_name="$run_name ${{ matrix.shield }}"
           fi
-          run_name="$run_name ${{ matrix.board }}"
+          run_name="$run_name "`echo "${{ matrix.board }}" | tr '/' '_'`
 
           hash_length=8
 
